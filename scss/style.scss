@@ -1,0 +1,306 @@
+html {
+	font-size: 62.5%;
+	font-family: Verdana;
+}
+.wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+}
+img {
+	max-width: 100%;
+	display: block;
+}
+a {
+	text-decoration: none;
+}
+.btn {
+	color: #FFF;
+	background-color: #8fbb3e;
+	text-transform: uppercase;
+	display: inline-block;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 1.3rem;
+	line-height: 28px;
+	border: 1px solid transparent;
+	transition: all 0.6s;
+
+	&:hover {
+		color: #8fbb3e;
+		background-color: #FFF;
+		border: 1px solid #8fbb3e;
+		transition: all 0.6s;
+	}
+}
+nav {
+	padding: 25px 0;	
+
+	.nav-toggle{
+		display: none;
+	}	
+
+	ul {
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+				li {
+					list-style-type: none;
+					position: relative;
+					padding: 5px;
+					transition: all 0.6s;
+
+					&:after {
+						content: '';
+						display: block;
+						width: 2px;
+						height: 6px;
+						background-color: #e3e3e3;
+						position: absolute;
+						top: 50%;
+						right: -8px;
+						transform: translateY(-50%); 
+					}
+
+					&:last-child:after {
+						content: none;
+					}			
+
+					a {
+						color: #000;
+						font-size: 1.2rem;
+					}
+
+					&:hover {
+						background-color: #e3e3e3;
+						transition: all 0.6s;
+					}
+				}
+	}
+}
+
+.header{
+	.logo{
+		padding: 20px;
+		background-color: #f3f3f3;
+	}
+}
+.offer {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.item {
+		margin: 30px 0;
+		width: 190px;
+
+		img {
+			margin-bottom: 30px;
+		}
+
+		.discount {
+			color: #FFF;
+			text-align: center;
+			font-size: 1.2rem;
+			width: 30px;
+			padding: 3px 5px;
+			background-color: #ff0101;
+		}
+		.price {
+			margin: 10px 0;
+
+			.old-price {
+				color: #cfb8b8;
+				text-decoration: line-through;
+				font-size: 1.2rem;
+			}
+			.new-price {
+				color: #8fbb3e;
+				font-size: 1.4rem;
+				font-weight: 700;
+				margin-top: 10px;
+
+				.gray-price {
+					color: #cfb8b8;
+				}
+			}
+		}
+		.item-description {
+			font-size: 1.1rem;
+			line-height: 15px;
+		}
+		.btn {
+			width: 100%;
+		}
+	}
+}
+.curiosities {
+	.banner {
+		background-color: #131a21;
+		padding: 5px 10px;
+		color: #FFF; 
+		font-size: 1.3rem;
+
+		span {
+			font-weight: 700;
+			font-size: 2rem;
+			text-transform: uppercase;
+		}
+
+		.btn {
+			width: 140px;
+			border: none;
+			margin-left: 10px;
+		}
+	}
+}
+.promotions {
+	margin: 20px 0 10px;
+}
+.footer {
+	margin: 5px 0;
+
+	nav ul li:after {
+		right: -40px;
+	}
+	nav ul li a {
+		font-size: 1.5rem;
+	}
+
+	.footer-bottom {
+		font-size: 1.5rem;
+		padding: 0;
+		margin: 0;
+		position: relative;
+
+		&:after,
+		&:before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: #a7a9ac;
+		}
+		&:after {
+			margin-top: 20px;
+		}
+		&:before {
+			margin-bottom: 20px;
+		}
+
+		a {
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			display: inline-block;
+			border: 2px solid #a7a9ac;
+			border-radius: 50%;
+			transition: all 0.6s;
+			margin-left: 150px;
+			
+			.fa {
+				color: #a7a9ac;
+				transition: all 0.6s;
+			}
+
+			&:hover {
+			  	border-color: #3b5998;
+			  	background-color: #3b5998;
+			  	transition: all 0.6s;
+
+			  	.fa {
+					color: #fff;
+					transition: all 0.6s;
+			  	}
+			}
+		}
+
+	}
+
+}
+
+@media only screen and (max-width: 600px){
+
+.header {
+	position: fixed;
+	width: 100%;
+}
+.home {
+	padding-top: 100px;
+}
+nav .nav-toggle {
+	display: block;
+	background: none;
+	border: none;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+
+	.fa {
+		font-size: 3rem;
+		color: #333;
+	}
+}
+nav {
+	padding: 0;
+	text-align: center;
+}
+nav .main-nav {
+	display: none;
+	background-color: #f3f3f3;
+	margin: 0;
+	padding: 10px 0;
+}
+nav .main-nav li {
+	margin-bottom: 10px;
+}
+nav .main-nav li:after {
+	content: none;
+}
+nav .main-nav.open {
+	display: block;
+}
+.offer {
+	
+	justify-content: space-around;
+
+	.item {
+		
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+}
+.curiosities .banner {
+	text-align: center;
+	line-height: 23px;
+}
+.curiosities .banner .btn {
+	display: block;
+	margin: 5px auto;
+}
+.footer nav ul {
+	flex-direction: column;
+}
+.footer nav ul li:after {
+	content: none;
+}
+.footer .footer-bottom {
+	text-align: center;
+}
+.footer .footer-bottom a {
+	margin-left: 0;
+	display: block;
+	margin: 15px auto;
+}
+}
+
+@media (max-width: 400px){
+.offer .item {
+		width: 85%;
+	}	
+.offer img {
+	margin: 0 auto;
+}
+}
